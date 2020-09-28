@@ -6,7 +6,7 @@ def order(values: list = None) -> list:
     if values is None:
         # TODO: demander les valeurs ici
         for i in range(9):
-            value = float(input())
+            value = float(input("Entrez une valeur: ))
             values.append(value)
         values.sort()
 
