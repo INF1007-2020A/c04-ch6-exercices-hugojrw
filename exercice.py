@@ -5,9 +5,12 @@
 def order(values: list = None) -> list:
     if values is None:
         # TODO: demander les valeurs ici
-        pass
+        for i in range(9):
+            value = float(input())
+            values.append(value)
+        values.sort()
 
-    return []
+    return values
 
 
 def anagrams(words: list = None) -> bool:
