@@ -30,6 +30,10 @@ def anagrams(words: list = None) -> bool:
 
 
 def contains_doubles(items: list) -> bool:
+    for elem in items:
+      if items.count(elem) > 1:
+        return True
+    
     return False
 
 
