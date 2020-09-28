@@ -53,8 +53,12 @@ def best_grades(student_grades: dict) -> dict:
 def frequence(sentence: str) -> dict:
     # TODO: Afficher les lettres les plus fréquentes
     #       Retourner le tableau de lettres
-
-    return {}
+    wordcount = {}
+    wordlist = list(sentence)
+    for elem in wordlist:
+      wordcount[elem] = wordlist.count(elem)
+    
+    return sorted(wordcount.items(), key=lambda x: x[1], reverse=True)
 
 
 def get_recipes():
