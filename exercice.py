@@ -60,15 +60,23 @@ def frequence(sentence: str) -> dict:
     
     return sorted(wordcount.items(), key=lambda x: x[1], reverse=True)
 
-
 def get_recipes():
     # TODO: Demander le nom d'une recette, puis ses ingredients et enregistrer dans une structure de données
-    pass
+    recipe = {}
+    nom = str(input("Entrez le nom de la recette: "))
+    ingredients = str(input("Entrez les ingredients separes par ', ': ")).split(", ")
+    recipe[nom] = ingredients
+    
+    return recipe
 
 
 def print_recipe(ingredients) -> None:
     # TODO: Demander le nom d'une recette, puis l'afficher si elle existe
-    pass
+    
+    try:
+      print(ingredients[str(input("Entrez le nom de la recette: "))])
+    except:
+      return False
 
 
 def main() -> None:
